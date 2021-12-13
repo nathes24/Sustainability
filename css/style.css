@@ -1,0 +1,506 @@
+/*----------------------------------------------*\
+    STYLES
+	======
+\*----------------------------------------------*/
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+    background-color: #dfdfd4;
+}
+video {
+    pointer-events: none;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color:#156D39;
+    
+  }
+
+h1, h2, h3, h4, nav, li, ul {
+    font-family: 'Ovo', serif;
+}
+
+p {
+    font-size: 18pt;
+    line-height: 160%;
+}
+span {
+    display: block;
+    margin-top: 20em;
+}
+.hover-underline {
+    display: inline-block;
+    position: relative;
+    /* background-image: linear-gradient(to right, #C0DA76, #156D39); */
+  }
+  .hover-underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #C0DA76, #156D39);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+:root {
+    --gradient: linear-gradient (45deg, 
+        #DEEBD3,
+        #F1F7EA,
+        #C0DA76,
+        #CEE198,
+        #70BE46,
+        #156D39,
+        #34773C,
+        #479646,
+        #31793D,
+        #71AC44,
+        #71BF46,
+        #AAD05D
+    );
+
+}
+h1 {
+    background-image: var(--gradient);
+    background-size:400%;
+    animation: gradient2 5s infinite ease;
+}
+
+@keyframes gradient2 {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+
+
+
+
+
+/*Javascript Animation*/
+#navbar {
+    /* background: white; */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 3em 1em 3em;
+    z-index: 999999;
+
+}
+
+#navbar p {
+    margin:0;
+    transform: translateY(-16px);
+}
+#navbar li {
+    display: flex;
+    align-items: center;
+}
+
+.hidenav {
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+}
+
+.shownav {
+    transform: translateY(0%);
+    transition: transform 0.5s ease;
+}
+
+
+
+/*phone size*/
+@media only screen and (max-width: 768px) {
+
+
+nav {
+    font-size: 20pt;
+    margin: 0;
+    padding: 10% 0 40px 85px;
+    position: relative;
+    text-align: left;
+   
+}
+
+/*.scroll {
+    overflow-y: scroll; 
+    height:350px;
+    padding: 2%;
+
+}
+*/
+.Captions {
+    font-size: 10pt;
+    padding-bottom: 5px;
+}
+.Header {
+    text-align: Center;
+
+}
+h1 {
+    font-size: 45pt;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20% 0 10px 0;
+}
+
+h2 {
+    font-size: 20pt;
+    margin-bottom: 3em;
+}
+.video1 {
+    display: flex;
+}
+
+.video2 {
+    width: 100%;
+}
+h3 {
+    font-size: 20pt;
+}
+
+h3, h4, p {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h3 {
+    padding-top: 10%;
+    padding-bottom: 10px;
+    font-size: 28pt;
+}
+.part1 h4 {
+    font-size: 22pt;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+p {
+    font-size: 15pt;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.part2 img {
+    display: none;
+}
+.quote {
+    background-color: grey;
+    font-size: 30pt;
+    padding: 10%;
+    color: white;
+}
+.part4 {
+    background-color: black;
+    color: white;
+}
+
+.part5 img {
+    margin: 0px;
+    padding: 10px 40px 10px 40px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*SVG Animation*/
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes jiggle {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(15px);
+    }
+}
+@keyframes jiggle2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-15px);
+    }
+    
+}
+@keyframes spin {
+    0% {
+        transform:rotate(0deg)
+    }
+    100% {
+        transform:rotate(360deg)
+    }
+}
+@keyframes gradient {
+    0% {
+        fill:#C0DA76;
+        color: #C0DA76;
+    }
+    25% {
+        fill:#70BE46; 
+        color: #70BE46;
+    }
+    50% {
+        fill:#156D39; 
+        color: #156D39;
+    }
+    75% {
+        fill: #479646; 
+        color: #479646;
+    }
+    100% {
+        fill:#71BF46; 
+        color: #71BF46;
+    }
+}
+@keyframes wiggle {
+    0% {transform: rotate(10deg);}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(20deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+  }
+.animatesun {
+    animation: bounce 1.5s infinite alternate;
+}
+.jiggle {
+    animation: jiggle 2s infinite alternate;
+}
+.jiggle2 {
+    animation: jiggle2 1s infinite alternate;
+}
+.spin {
+    animation: spin 2s infinite alternate;
+}
+.gradient {
+    animation: gradient 5s infinite alternate;
+}
+/* .butterfly {
+    display: inline-block;
+    animation: wiggle 2.5s infinite;
+    
+} */
+
+
+
+
+/* others size */
+@media only screen and (min-width: 768px) {
+    
+    .landing-page {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 32px;
+    padding: 10rem;
+    }
+
+    nav {
+        position: relative;
+        z-index: 99999;
+        font-size: 28pt;
+        flex: 1;
+        animation: fadein 5s ease-in;
+    }
+
+    .Header {
+        text-align: left;
+        animation: fadein 4s ease-in;
+    }
+
+    .video1 {
+        position: absolute;
+        object-fit: cover;
+        right: 30px;
+
+        transform: none;
+        width: 60%;
+
+        /*animation*/
+        z-index: 0;
+        animation-name: fadein 2s ease-in;
+
+    }
+    .Captions {
+        font-size: 12pt;
+        display: block;
+        padding-bottom: 5px;
+    }
+    h1 {
+        font-size: 70pt;
+    }
+    h2 {
+        max-width: 500px;
+        padding-bottom: 5rem;
+        font-size: 35pt;
+        
+    }
+ 
+
+    /*Center text*/
+    .part1, .part3-text, .part7, .part5-top  {
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        margin-bottom: 10em;
+    }
+
+    /*right text*/
+        .part2-top, .part2-bot, .part4, .puma, .part6 {
+            align-items: start;
+            display: grid;
+            grid-template-columns: 6fr 30em;
+            column-gap: 14px;
+            padding-left: 119px;
+            padding-right: 80px;
+            margin-bottom: 6em;
+     }
+
+    h3 {
+        position: relative;
+        z-index: 9999;
+        font-size: 60pt;
+        padding-bottom: 40px;
+    }
+    .part1 h4 {
+        font-size: 30pt;
+        color: green;
+        padding-bottom: 30px;
+    }
+
+    .part2-top .left video {
+        width: 90%;
+    }
+    .corp-img img {
+        max-width: 80%;
+        object-fit: cover;
+
+        
+    }
+    .video2 {
+        /* width: 95%; */
+        /* position: sticky; */
+        z-index: 10;
+    }
+
+    .part2-top .left {
+        top: 5rem;
+    position: sticky;
+    }
+    .part2-bot {
+        margin-top: 6em;
+    }
+    
+    .quote {
+        font-size: 60pt;
+        position: relative;
+        z-index: 1;
+       
+    }
+
+    svg {
+        position: relative;
+       
+        width: 80%;
+    }
+    .part3  {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        column-gap: 14px;
+        padding-left: 119px;
+        padding-right: 80px;
+        margin-bottom: 6em;
+    }
+    .part3 h3 {
+        transform: rotate(270deg)
+        
+    }
+    .part3 img {
+        width: 100%;
+    }
+    .part3-quote {
+        background: #479646;
+        font-size: 80pt;
+        padding: 50px;
+        text-align: center;
+        margin-bottom: 50px;
+        color: white;
+    }
+
+    .part4 {
+        background-color: black;
+        padding-top: 8em;
+        padding-bottom: 8em;
+        color: white;
+    }
+    .part5-bot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 30em;
+        column-gap: 20px;
+        padding-left: 119px;
+        padding-right: 80px;
+    }
+    .part5-top {
+        margin-bottom: 2em;  
+    }
+
+    .part6-top h3 {
+        transform: translateX(5em);
+    }
+    .pela2 {
+        margin-top: 5em;
+        transform: translateY(13.5em);
+    }
+    .part6-bottext {
+      
+        padding-right: 80px;
+        display: grid;
+        grid-template-columns: 2fr 30em;
+    }
+    .pelacase {
+        transform: translateX(-20px);
+    }
+    .pelasystem {
+        width: 95%;
+    }
+    
+}
+
+
