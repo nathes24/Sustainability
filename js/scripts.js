@@ -7,7 +7,7 @@ let prev = window.pageYOffset;
 window.onscroll = function () {
 let now = window.pageYOffset;
 
-if (prev > now) {
+if (prev < now) {
 navbar.classList.remove("hidenav");
 navbar.classList.add("shownav");
 } 
